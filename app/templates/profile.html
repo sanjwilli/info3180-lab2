@@ -6,7 +6,7 @@
 	<div class="pro"><img src="{{ url_for('static', filename='img/profile.jpg')}}"></div>
 	<div class="info">
 		<div class="name_info"><b>Sanjay Williams</b></div>
-		<div class="details">Today's date is {{ day }}{{ date }}{{ month }}{{ year }}</div>
+		<div class="details">Today's date is {{ date }}</div>
 		<div class="details">
 			<ul>
 				<li><b>Username:</b> Sanjay</li>
@@ -18,4 +18,5 @@
 		<div class="details app_none">I am a Student.</div>
 	</div>
 </div>
+<!-- {{ day }}{{ date }}{{ month }}{{ year }} -->
 {% endblock %}

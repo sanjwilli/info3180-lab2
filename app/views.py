@@ -29,8 +29,8 @@ def about():
 @app.route('/profile/')
 def profile():
     """Render the website's profile page."""
-    d,m,dt,yr = timeinfo()
-    return render_template('profile.html', day = d, month = m, date = dt, year = yr)
+    date = timeinfo()
+    return render_template('profile.html', date = date )
 
 ###
 # The functions below should be applicable to all Flask apps.
@@ -62,12 +62,14 @@ def page_not_found(error):
 def timeinfo():
     now = time.strftime("%c")
 
-    day = str(now[:4])
+    day = str(now[:3])
     month = str(now[4:8])
     date = str(now[8:10])
     year = str(now[-5:])
 
-    return day, date, month, year
+    fd = day + ", " + date + " " + month + " " + year
+
+    return fd
 
 if __name__ == '__main__':
     app.run(debug=True,host="0.0.0.0",port="8080")
