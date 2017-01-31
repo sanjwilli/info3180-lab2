@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block main %}
+<h1 class="page-header">Profile</h1>
+<div class="app_container">
+	<div class="pro"><img src="{{ url_for('static', filename='img/profile.jpg')}}"></div>
+	<div class="info">
+		<div class="name_info"><b>Sanjay Williams</b></div>
+		<div class="details">Today's date is {{ day }}{{ date }}{{ month }}{{ year }}</div>
+		<div class="details">
+			<ul>
+				<li><b>Username:</b> Sanjay</li>
+				<li><b>ID Number:</b> 620012345</li>
+				<li><b>Age:</b> 22</li>
+				<li><b>Gender:</b> Male</li>
+			</ul>
+		</div>
+		<div class="details app_none">I am a Student.</div>
+	</div>
+</div>
+{% endblock %}
